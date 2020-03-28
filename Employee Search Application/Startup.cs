@@ -1,10 +1,12 @@
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.SpaServices.AngularCli;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.EntityFrameworkCore;
+using Employee_Search_Application.Data;
 
 namespace Employee_Search_Application
 {
@@ -26,6 +28,12 @@ namespace Employee_Search_Application
             {
                 configuration.RootPath = "ClientApp/dist";
             });
+
+            services.AddDbContext<Employee_Search_ApplicationContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("Employee_Search_ApplicationContext")));
+
+            services.AddDbContext<Employee_Search_ApplicationContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("Employee_Search_ApplicationContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

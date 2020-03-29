@@ -32,8 +32,6 @@ namespace Employee_Search_Application
             services.AddDbContext<Employee_Search_ApplicationContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("Employee_Search_ApplicationContext")));
 
-            services.AddDbContext<Employee_Search_ApplicationContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("Employee_Search_ApplicationContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

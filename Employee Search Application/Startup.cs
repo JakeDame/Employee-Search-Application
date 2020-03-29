@@ -29,6 +29,14 @@ namespace Employee_Search_Application
                 configuration.RootPath = "ClientApp/dist";
             });
 
+            services.AddCors(options =>
+            {
+                options.AddPolicy("allowany", builder =>
+                {
+                    builder.AllowAnyOrigin();
+                });
+            });
+
             services.AddDbContext<Employee_Search_ApplicationContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("Employee_Search_ApplicationContext")));
 
@@ -47,6 +55,7 @@ namespace Employee_Search_Application
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+            app.UseCors("allowany");
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();

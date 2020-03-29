@@ -1,15 +1,26 @@
-<h1>Employee Search:</h1>
-<br />
+<h3>Employee Search:</h3>
 
 <div class="container-fluid" id="searchParameters">
-  <label>Employee Name: </label>
-  <input name="name" type="text" placeholder="Employee Name" />
+  <mat-form-field class="add-employee-full-width">
+    <mat-label>First Name</mat-label>
+    <input matInput />
+  </mat-form-field>
+  <mat-form-field class="add-employee-full-width">
+    <mat-label>Last Name</mat-label>
+    <input matInput />
+  </mat-form-field>
   <br />
-  <label>Employment Date:</label>
-  <input name="startDate" type="date" />
+  <mat-form-field class="add-employee-full-width">
+    <mat-label>Start Date</mat-label>
+    <input type="date" matInput />
+  </mat-form-field>
   <span> to </span>
-  <input name="endDate" type="date" />
+  <mat-form-field class="add-employee-full-width">
+    <mat-label>End Date</mat-label>
+    <input type="date" matInput />
+  </mat-form-field>
   <br />
-  <button class="btn btn-primary">Search</button>
+  <button mat-flat-button>Search</button>
 </div>
-
+<br />
+<app-employee-results></app-employee-results>

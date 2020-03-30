@@ -1,4 +1,6 @@
 # Employee-Search-Application
+-Technology used:
+  - .Net, Angular 8, Entity Framework
 
 1. Edit the database connection string in the appsettings.json file to connect to a local database.
 2. Ensure the program is running on port 44341.

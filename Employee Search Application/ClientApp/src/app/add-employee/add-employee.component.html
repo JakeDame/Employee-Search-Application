@@ -1,25 +1,25 @@
 <h3>Add Employee: </h3>
 
 <div class="container-fluid">
-<form class="add-employee-form">
+<form class="add-employee-form" [formGroup]="addEmployeeForm" (ngSubmit)="onSubmit()">
   <table class="add-employee-full-width" cellspacing="0">
     <tr>
       <td>
         <mat-form-field class="add-employee-full-width">
           <mat-label>First Name</mat-label>
-          <input matInput />
+          <input matInput formControlName="firstName"/>
         </mat-form-field>
       </td>
       <td>
         <mat-form-field class="add-employee-full-width">
           <mat-label>Last Name</mat-label>
-          <input matInput />
+          <input matInput formControlName="lastName"/>
         </mat-form-field>
       </td>
       <td>
         <mat-form-field class="add-employee-full-width">
-          <mat-label>Age</mat-label>
-          <input matInput />
+          <mat-label>Birthdate</mat-label>
+          <input type="date" matInput formControlName="age"/>
         </mat-form-field>
       </td>
     </tr>
@@ -30,25 +30,25 @@
       <td>
         <mat-form-field class="add-employee-full-width">
           <mat-label>Job Title</mat-label>
-          <input matInput />
+          <input matInput formControlName="jobTitle"/>
         </mat-form-field>
       </td>
       <td>
         <mat-form-field class="add-employee-full-width">
           <mat-label>Start Date</mat-label>
-          <input type="date" matInput />
+          <input type="date" matInput formControlName="startDate"/>
         </mat-form-field>
       </td>
       <td>
         <mat-form-field class="add-employee-full-width">
           <mat-label>End Date</mat-label>
-          <input type="date" matInput />
+          <input type="date" matInput formControlName="endDate"/>
         </mat-form-field>
       </td>
     </tr>
   </table>
-  <button mat-raised-button>Add</button>
+  <button mat-raised-button type="submit">Add</button>
 </form>
 </div>
 <br />
-<app-employee-results></app-employee-results>
+

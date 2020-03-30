@@ -21,19 +21,19 @@
   <!-- Age Column -->
   <ng-container matColumnDef="age">
     <th mat-header-cell *matHeaderCellDef> Age </th>
-    <td mat-cell *matCellDef="let employee"> {{employee.age}} </td>
+    <td mat-cell *matCellDef="let employee"> {{employee.age.fromNow(true)}} </td>
   </ng-container>
 
   <!-- Start Date Column -->
   <ng-container matColumnDef="startDate">
     <th mat-header-cell *matHeaderCellDef> Start Date </th>
-    <td mat-cell *matCellDef="let employee"> {{employee.startDate}} </td>
+    <td mat-cell *matCellDef="let employee"> {{employee.startDate.format("L")}} </td>
   </ng-container>
 
   <!-- End Date Column -->
   <ng-container matColumnDef="endDate">
     <th mat-header-cell *matHeaderCellDef> End Date </th>
-    <td mat-cell *matCellDef="let employee"> {{employee.endDate}} </td>
+    <td mat-cell *matCellDef="let employee"> {{employee.endDate.format("L")}} </td>
   </ng-container>
 
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

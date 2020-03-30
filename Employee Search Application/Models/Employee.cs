@@ -11,7 +11,7 @@ namespace Employee_Search_Application.Models
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string JobTitle { get; set; }
-        public int Age { get; set; }
+        public DateTime Age { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
 

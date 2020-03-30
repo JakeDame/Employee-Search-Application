@@ -5,11 +5,11 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { MatInputModule } from '@angular/material/input';
 import { MatTableModule } from '@angular/material/table';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
-import { EmployeeSearchComponent } from './employee-search/employee-search.component'
+import { EmployeeSearchComponent } from './employee-search/employee-search.component';
 import { EmployeeResultsComponent } from './employee-results/employee-results.component';
 import { AddEmployeeComponent } from './add-employee/add-employee.component';
 
@@ -19,7 +19,7 @@ import { AddEmployeeComponent } from './add-employee/add-employee.component';
     NavMenuComponent,
     EmployeeResultsComponent,
     EmployeeSearchComponent,
-    AddEmployeeComponent
+    AddEmployeeComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -32,9 +32,9 @@ import { AddEmployeeComponent } from './add-employee/add-employee.component';
     ]),
     BrowserAnimationsModule,
     MatInputModule,
-    MatTableModule
+    MatTableModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

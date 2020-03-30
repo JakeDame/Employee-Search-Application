@@ -1,16 +1,18 @@
 import { TestBed } from '@angular/core/testing';
-import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
+import {
+  HttpClientTestingModule,
+  HttpTestingController,
+} from '@angular/common/http/testing';
 
 import { EmployeeService } from './employee.service';
-
 
 describe('EmployeeService', () => {
   let httpTestingController: HttpTestingController;
   let employeeService: EmployeeService;
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [HttpClientTestingModule]
-    })
+      imports: [HttpClientTestingModule],
+    });
     employeeService = TestBed.get(EmployeeService);
     httpTestingController = TestBed.get(HttpTestingController);
   });
@@ -26,16 +28,18 @@ describe('EmployeeService', () => {
 
   describe('#getEmployee', () => {
     it('should return an array of employee objects', () => {
-      const mockEmployee = [{
-        employeeId: 1,
-        firstName: "John",
-        lastName: "Smith",
-        jobTitle: "CEO",
-        age: new Date("1980-7-10"),
-        startDate: new Date("2005-09-01"),
-        endDate: new Date("2010-06-15")
-      }];
-      employeeService.getEmployees().subscribe(employees => {
+      const mockEmployee = [
+        {
+          employeeId: 1,
+          firstName: 'John',
+          lastName: 'Smith',
+          jobTitle: 'CEO',
+          age: new Date('1980-7-10'),
+          startDate: new Date('2005-09-01'),
+          endDate: new Date('2010-06-15'),
+        },
+      ];
+      employeeService.getEmployees().subscribe((employees) => {
         expect(employees.length).toBe(1);
       });
 
@@ -46,4 +50,3 @@ describe('EmployeeService', () => {
     });
   });
 });
-

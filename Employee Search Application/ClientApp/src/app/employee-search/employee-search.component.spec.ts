@@ -3,8 +3,7 @@ import { FormGroup } from '@angular/forms';
 import { Component, Input } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { EmployeeSearchComponent } from './employee-search.component';
 
@@ -20,9 +19,13 @@ describe('EmployeeSearchComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [EmployeeSearchComponent, EmployeeResultsStubComponent],
-      imports: [FormsModule, ReactiveFormsModule, MatInputModule, BrowserAnimationsModule]
-    })
-    .compileComponents();
+      imports: [
+        FormsModule,
+        ReactiveFormsModule,
+        MatInputModule,
+        BrowserAnimationsModule,
+      ],
+    }).compileComponents();
   }));
 
   beforeEach(() => {
